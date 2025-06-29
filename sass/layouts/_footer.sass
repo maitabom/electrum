@@ -1,0 +1,52 @@
+@use '../base/variables' as *
+@use '../base/mixins' as *
+@use 'mixins' as *
+
+.footer
+    background-color: $bg-color
+    padding: 3rem 0
+
+    a, p
+        color: $gray-text-color
+    
+    li, p
+        margin-bottom: 1rem
+
+        a
+            &:hover
+                color: $primary-color
+
+    i
+        margin-right: 0.3rem
+
+    h3
+        color: $light-color
+        text-transform: uppercase
+        font-size: 1.75rem
+        margin-bottom: 1.5rem
+
+    &-top
+        @include center-content
+        padding-bottom: 3rem
+
+        &-about, &-categories, &-information, &-menu
+            max-width: 25%
+
+    &-bottom
+        @include center-content
+        flex-direction: column
+        justify-content: center
+        align-items: center
+
+        &-payments
+            margin-bottom: 2rem
+
+            i
+                color: $dark-color
+                cursor: pointer
+                font-size: 3rem
+                margin: 5px
+                transition: all 0.4s
+
+                &:hover
+                    color: $primary-color
