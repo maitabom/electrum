@@ -9,6 +9,9 @@
         background-color: $secondary-bg-color
         color: $light-color
 
+        @include mobile
+            display: none
+
         &-container
             @include center-content
             padding: 0.8rem 0
@@ -27,6 +30,10 @@
         @include center-content
         padding: 1.3rem 0
 
+        @include mobile
+            flex-direction: column
+            align-items: center
+
         a, span, i
             color: #ffffff
 
@@ -44,6 +51,10 @@
             justify-content: center
             width: 45%
 
+            @include mobile
+                width: 100%
+                margin: 2rem 0
+
             input, button
                 height: 40px
 
@@ -58,6 +69,9 @@
             .wishlist-container, .cart-container
                 @include header-icon
 
+                @include mobile
+                    margin: 1rem
+
 .bottom-header
     background-color: $light-color
     border-bottom: 2px solid $section-bg-color
@@ -67,6 +81,9 @@
         @include center-content
         justify-content: left
         padding: 1rem 0
+
+        @include mobile
+            display: none
 
         li
             margin-right: 1.3rem
